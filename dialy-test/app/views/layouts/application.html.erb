@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DialyTest</title>
+    <title>社内システムDialy</title>
     <%= csrf_meta_tags %>
 
+    <%= stylesheet_link_tag("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css") %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header>
+        <div class="logo">
+            <%= image_tag("yourmystar_logo.png") %>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><%= link_to("マイページ", "/dialy/mypage") %></li>
+                <li><%= link_to("ログアウト", "/dialy/logout") %></li>
+                <li class="active"><%= link_to("マイページ", "/dialy/mypage") %></li>
+            </ul>
+        </div>
+    </header>
     <%= yield %>
   </body>
 </html>
