@@ -1,0 +1,2 @@
+module DialyHelper
+end
